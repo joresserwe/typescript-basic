@@ -1,0 +1,26 @@
+{
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "src/**/*.js"],
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "jsx": "preserve" /* JSX 코드 생성 설정: 'preserve', 'react-native', 혹은 'react'. */,
+    "allowJs": true, // Javascript를 import 할 수있음.
+    "checkJs": true, // @ts-check에 대해 검색 // js를 ts문법에 맞게 적을 수 있게 함.
+    "forceConsistentCasingInFileNames": true,
+    "typeRoots": [
+      "./src/types",
+      "./node_modules/@types"
+    ] /* 타입 정의를 포함할 폴더 목록, 설정 안 할 시 기본적으로 ./node_modules/@types로 설정 */,
+    "strict": true,
+    "noImplicitAny": true, // Any Type 금지
+    "skipLibCheck": true,
+    "noUnusedLocals": true, // 쓰지 않는 로컬변수 Error
+    "noUnusedParameters": true, // Parameter 안쓰면 error
+    "removeComments": true, //컴파일시 주석제거
+    "outDir": "build",
+    "rootDir": "src"
+    // "lib": ["ES6", "DOM"] // Typescript의 lib를 사용, 자동완성 기능 됨(아무것도 안적으면 모든환경)
+    // DOM : 브라우저
+  }
+}
